@@ -179,7 +179,7 @@ static int testMenuFactory()
 };
 
 
-int main()
+int main2()
 {
     //Testing::testSplit();
     //Testing::testSplitRegex();

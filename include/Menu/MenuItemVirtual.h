@@ -4,7 +4,6 @@
 #include <string>
 #include <vector>
 #include <functional>
-#include "StdOut.h"
 #include "StringUtils.h"
 
 using namespace std;

@@ -36,16 +36,20 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/Menu/MenuFactory.h" />
+		<Unit filename="include/Menu/MenuItemFunctionPointer.h" />
+		<Unit filename="include/Menu/MenuItemVirtual.h" />
 		<Unit filename="include/Menu/SimpleMenu.h" />
-		<Unit filename="include/MenuItemVirtual.h" />
 		<Unit filename="include/StdOut.h" />
 		<Unit filename="include/StringUtils.h" />
 		<Unit filename="include/Testing.h">
 			<Option target="Debug" />
 		</Unit>
 		<Unit filename="include/VectorUtils.h" />
+		<Unit filename="src/Menu/MenuFactory.cpp" />
+		<Unit filename="src/Menu/MenuItemFunctionPointer.cpp" />
+		<Unit filename="src/Menu/MenuItemVirtual.cpp" />
 		<Unit filename="src/Menu/SimpleMenu.cpp" />
-		<Unit filename="src/MenuItemVirtual.cpp" />
 		<Unit filename="src/StdOut.cpp" />
 		<Unit filename="src/StringUtils.cpp" />
 		<Unit filename="src/Testing.cpp">

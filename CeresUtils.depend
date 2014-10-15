@@ -46,7 +46,7 @@
 	<vector>
 	<functional>
 
-1413369388 source:/home/tim/Development/CeresUtils/src/StringUtils.cpp
+1413383944 source:/home/tim/Development/CeresUtils/src/StringUtils.cpp
 	"StringUtils.h"
 	<boost/algorithm/string/predicate.hpp>
 	<iostream>
@@ -57,14 +57,14 @@
 	"VectorUtils.h"
 	<regex>
 
-1413369054 /home/tim/Development/CeresUtils/include/StringUtils.h
+1413383663 /home/tim/Development/CeresUtils/include/StringUtils.h
 	<string>
 	<vector>
 
 1413202117 source:/home/tim/Development/CeresUtils/src/Testing.cpp
 	"Testing.h"
 
-1413372548 /home/tim/Development/CeresUtils/include/Testing.h
+1413383696 /home/tim/Development/CeresUtils/include/Testing.h
 	"StdOut.h"
 	"VectorUtils.h"
 	"StringUtils.h"
@@ -91,17 +91,16 @@
 	<vector>
 	<functional>
 
-1413373389 /home/tim/Development/CeresUtils/include/Menu/MenuItemVirtual.h
+1413383862 /home/tim/Development/CeresUtils/include/Menu/MenuItemVirtual.h
 	<string>
 	<vector>
 	<functional>
-	"StdOut.h"
 	"StringUtils.h"
 
-1413373514 source:/home/tim/Development/CeresUtils/src/Menu/MenuItemVirtual.cpp
+1413383862 source:/home/tim/Development/CeresUtils/src/Menu/MenuItemVirtual.cpp
 	"Menu/MenuItemVirtual.h"
 
-1413373556 source:/home/tim/Development/CeresUtils/src/Menu/SimpleMenu.cpp
+1413377536 source:/home/tim/Development/CeresUtils/src/Menu/SimpleMenu.cpp
 	"Menu/SimpleMenu.h"
 	"StdOut.h"
 	<algorithm>

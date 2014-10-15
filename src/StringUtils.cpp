@@ -67,6 +67,10 @@ bool StringUtils::isUInt(const string& str)
     return regex_match(str, regex("\\-?[0-9]+"));
 }
 
+string StringUtils::addWhiteSpaceUntillLengthIs(int length, string in)
+{
+    return in + string(length-in.length(), ' ');
+}
 
 
 

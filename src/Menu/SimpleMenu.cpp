@@ -75,6 +75,8 @@ void SimpleMenu::show()
     for (int i = 0; i< items.size(); i++)
         StdOut::out(items.at(i)->showD(i));
 
+    StdOut::out("Enter selection:");
+
     string input;
 
 

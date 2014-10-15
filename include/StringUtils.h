@@ -25,6 +25,7 @@ class StringUtils
         static const string clrCyan;
         static const string clrWhite;
 
+        static string addWhiteSpaceUntillLengthIs(int length, string in);
     protected:
     private:
 };
