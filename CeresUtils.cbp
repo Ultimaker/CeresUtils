@@ -36,25 +36,21 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/Menu/Menu.h" />
 		<Unit filename="include/Menu/MenuFactory.h" />
-		<Unit filename="include/Menu/MenuItemFunctionPointer.h" />
-		<Unit filename="include/Menu/MenuItemVirtual.h" />
-		<Unit filename="include/Menu/SimpleMenu.h" />
+		<Unit filename="include/Menu/MenuOption.h" />
+		<Unit filename="include/Menu/MenuOptionByFunctionPointer.h" />
 		<Unit filename="include/StdOut.h" />
 		<Unit filename="include/StringUtils.h" />
-		<Unit filename="include/Testing.h">
-			<Option target="Debug" />
-		</Unit>
+		<Unit filename="include/SystemUtils.h" />
 		<Unit filename="include/VectorUtils.h" />
+		<Unit filename="src/Menu/Menu.cpp" />
 		<Unit filename="src/Menu/MenuFactory.cpp" />
-		<Unit filename="src/Menu/MenuItemFunctionPointer.cpp" />
-		<Unit filename="src/Menu/MenuItemVirtual.cpp" />
-		<Unit filename="src/Menu/SimpleMenu.cpp" />
+		<Unit filename="src/Menu/MenuOption.cpp" />
+		<Unit filename="src/Menu/MenuOptionByFunctionPointer.cpp" />
 		<Unit filename="src/StdOut.cpp" />
 		<Unit filename="src/StringUtils.cpp" />
-		<Unit filename="src/Testing.cpp">
-			<Option target="Debug" />
-		</Unit>
+		<Unit filename="src/SystemUtils.cpp" />
 		<Unit filename="src/VectorUtils.cpp" />
 		<Extensions>
 			<code_completion />

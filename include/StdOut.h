@@ -6,7 +6,7 @@
 class StdOut
 {
     public:
-        static void out(std::string str);
+        static void out(std::string str); //!< std::cout << str << std::endl;
     protected:
     private:
 };

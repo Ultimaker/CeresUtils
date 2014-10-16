@@ -15,6 +15,7 @@ class VectorUtils
 {
     public:
 
+/** delete element by moving the last element to its place (not order preserving!)  */
         template <typename T, typename A>
             static void deleteFast(vector<T, A>  &v, typename vector<T, A>::iterator it)
         {
@@ -29,6 +30,7 @@ class VectorUtils
         //template <typename T, typename A>
           //  static string toString(const vector<T, A>& in);
 
+/** for example "[1,2,3]" */
     template <typename T, typename A>
     static string toString(const vector<T, A>& vec)
     {
