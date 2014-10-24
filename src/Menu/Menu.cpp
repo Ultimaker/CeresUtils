@@ -34,12 +34,12 @@ void Menu::present()
 
 void Menu::show()
 {
-    StdOut::out(title_bar);
+    StdOut::printLine(title_bar);
 
     for (int i = 0; i< options.size(); i++)
-        StdOut::out(options.at(i)->showDescription(i));
+        StdOut::printLine(options.at(i)->showDescription(i));
 
-    StdOut::out("Enter selection:");
+    StdOut::printLine("Enter selection:");
 
     string input;
 

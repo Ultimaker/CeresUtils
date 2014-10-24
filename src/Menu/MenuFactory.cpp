@@ -45,13 +45,15 @@ void MenuFactory::helpFunction(vector<string>& args)
         for (int i = 0; i < options.size(); i++)
         {
             item = options.at(i);
-            StdOut::out( item->showInfo(i) );
+            StdOut::print("\x1b[34m");
+            StdOut::printLine( item->showInfo(i) );
+            StdOut::print("\x1b[37m");
         }
     }
     else
     {
         // cout << "helpFunction" << endl;
-        StdOut::out(  item->showInfo() );
+        StdOut::printLine(  item->showInfo() );
 
     }
 }
