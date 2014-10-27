@@ -45,9 +45,9 @@ void MenuFactory::helpFunction(vector<string>& args)
         for (int i = 0; i < options.size(); i++)
         {
             item = options.at(i);
-            StdOut::print("\x1b[34m");
+            StdOut::print(StringUtils::clr_blue);
             StdOut::printLine( item->showInfo(i) );
-            StdOut::print("\x1b[37m");
+            StdOut::print(StringUtils::clr_white);
         }
     }
     else
