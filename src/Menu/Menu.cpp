@@ -2,6 +2,7 @@
 #include "StdOut.h"
 #include <algorithm>
 #include <functional>
+#include <iostream>
 #include <boost/algorithm/string/predicate.hpp> /// for find_if(...)
 #include "StringUtils.h"
 #include "VectorUtils.h"
