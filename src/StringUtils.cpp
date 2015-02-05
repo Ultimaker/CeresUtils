@@ -51,16 +51,13 @@ vector<string> StringUtils::split(const string &s, char delim) {
 
 vector<string> & StringUtils::split(const string &str, const string& rgx, vector<string> &elems) {
     regex r(rgx);
-
-    regex_token_iterator<string::const_iterator> i(str.begin(), str.end(), r, -1);
-
-    // default constructor = end-of-sequence:
-    regex_token_iterator<string::const_iterator> eos;
-
-    while (i != eos)
+    smatch string_match;
+    if(regex_search(str,string_match,r)) //There is at least one match.
     {
-        elems.push_back(*i);
-        i++;
+        for(int i = 1;i < string_match.size();i++) //Push all matches onto the vector. Note: Must start at 1.
+        {
+            elems.push_back(string_match[i]);
+        }
     }
     return elems;
 }
