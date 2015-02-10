@@ -52,8 +52,7 @@ void Menu::show()
             cout << "can we ever get here? (Menu.cpp +/- line 60)" << endl;
         }
 
-        vector<string> args = StringUtils::split(input, string("\\s+"));
-
+        vector<string> args = StringUtils::splitWhitespace(input);
 
         MenuOption* i = getMenuItemFromString(args.at(0));
         if (i == nullptr)

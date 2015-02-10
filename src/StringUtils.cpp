@@ -49,7 +49,7 @@ vector<string> StringUtils::split(const string &s, char delim) {
 }
 
 
-vector<string> & StringUtils::split(const string &str, const string& rgx, vector<string> &elems) {
+vector<string> & StringUtils::split(const string &str, const string &rgx, vector<string> &elems) {
     regex r(rgx);
     smatch string_match;
     if(regex_search(str,string_match,r)) //There is at least one match.
@@ -68,9 +68,19 @@ vector<string> StringUtils::split(const string &s, const string& rgx) {
     return elems;
 }
 
+vector<string> StringUtils::splitWhitespace(const string &str)
+{
+    istringstream buffer(str);
+    vector<string> result((istream_iterator<string>(buffer)),istream_iterator<string>());
+    return result;
+}
+
 bool StringUtils::isUInt(const string& str)
 {
-    return regex_match(str, regex("\\-?[0-9]+"));
+    if(str.empty()) return false;
+    char* p;
+    strtol(str.c_str(),&p,11); //Will set p to point to the first non-numeric character it encounters.
+    return (*p == 0); //If the first non-numeric character is the string-terminating null character, it's all numeric.
 }
 
 string StringUtils::addWhiteSpaceUntillLengthIs(int length, string in)

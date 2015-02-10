@@ -13,6 +13,16 @@ class StringUtils
         static vector<string> split(const string& in, char separator);
         static vector<string> &split(const string &s, const string& rgx, vector<string> &elems); //!< split string and put substrings in specified vector @param rgx regular expressions
         static vector<string> split(const string& in, const string& rgx); //!< @param rgx regular expressions
+        /*!
+         * \brief Splits a string by whitespace.
+         *
+         * This doesn't use regular expressions to split the string, so it will
+         * often be faster and most importantly, be able to run in older MinGW
+         * versions.
+         *
+         * \param str The string to split.
+         */
+        static vector<string> splitWhitespace(const string& in);
 
         static bool isUInt(const string& str);
 
