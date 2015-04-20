@@ -3,6 +3,7 @@ project (CeresUtils)
 
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
+include(FindBoost)
 
 set(ceres_base ${ceres_base}
 		include/Menu/Menu.h
@@ -23,7 +24,15 @@ set(ceres_base ${ceres_base}
 		src/VectorUtils.cpp
 )
 
+find_package(Boost COMPONENTS system REQUIRED)
+if(NOT Boost_FOUND)
+	message("Warning: Boost libraries not found")
+endif(NOT Boost_FOUND)
+
+message("${Boost_LIBRARIES}")
+
 include_directories(include)
+link_libraries(${Boost_SYSTEM_LIBRARY})
 link_libraries(stdc++)
 
 set(CMAKE_CXX_FLAGS "-O2 -g -std=c++11 -Wall")
