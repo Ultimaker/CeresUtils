@@ -29,9 +29,10 @@ if(NOT Boost_FOUND)
 	message("Warning: Boost libraries not found")
 endif(NOT Boost_FOUND)
 
-message("${Boost_LIBRARIES}")
+message("${Boost_SYSTEM_LIBRARY}")
 
 include_directories(include)
+include_directories(${Boost_INCLUDE_DIR})
 link_libraries(${Boost_SYSTEM_LIBRARY})
 link_libraries(stdc++)
 
