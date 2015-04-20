@@ -1,6 +1,9 @@
 cmake_minimum_required (VERSION 2.6)
 project (CeresUtils)
 
+include(GNUInstallDirs)
+include(CMakePackageConfigHelpers)
+
 set(ceres_base ${ceres_base}
 		include/Menu/Menu.h
 		include/Menu/MenuFactory.h
@@ -26,16 +29,35 @@ link_libraries(stdc++)
 set(CMAKE_CXX_FLAGS "-O2 -g -std=c++11 -Wall")
 set(CMAKE_LD_FLAGS "-S")
 
+set(CERESUTILS_VERSION 0.1.0)
+
 add_library(CeresUtils SHARED
 	${ceres_base}
 )
 
+target_include_directories(CeresUtils PUBLIC
+	    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+   		$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/CeresUtils>)
+
 install(TARGETS CeresUtils
-		RUNTIME DESTINATION bin
-		LIBRARY DESTINATION lib)
+		EXPORT CeresUtils-targets
+		RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+		LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 install(DIRECTORY include/
 		DESTINATION include/CeresUtils
 		FILES_MATCHING PATTERN "*.h")
+install(EXPORT CeresUtils-targets
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/CeresUtils
+)
+
+configure_package_config_file(CeresUtilsConfig.cmake.in ${CMAKE_BINARY_DIR}/CeresUtilsConfig.cmake INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/CeresUtils)
+write_basic_package_version_file(${CMAKE_BINARY_DIR}/CeresUtilsConfigVersion.cmake VERSION ${CERESUTILS_VERSION} COMPATIBILITY SameMajorVersion)
+
+install(FILES
+    ${CMAKE_BINARY_DIR}/CeresUtilsConfig.cmake
+    ${CMAKE_BINARY_DIR}/CeresUtilsConfigVersion.cmake
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/CeresUtils
+)
 
 FIND_PACKAGE(Doxygen)
 
