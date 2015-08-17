@@ -1,4 +1,7 @@
 build/*
+nbproject/*
+CMakeFiles/*
+CeresUtilsConfig.cmake
 CeresUtils.layout
 *.html
 html/arrowdown.png
@@ -36,3 +39,9 @@ html/tab_h.png
 html/tab_s.png
 latex/make.bat
 latex/Makefile
+install_manifest.txt
+CMakeCache.txt
+CeresUtilsConfigVersion.cmake
+compile_commands.json
+Makefile
+cmake_install.cmake
