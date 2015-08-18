@@ -42,7 +42,7 @@ void MenuFactory::helpFunction(vector<string>& args)
     {
         // cout <<  "non-specific help" << endl;
         auto options = menu->getOptions();
-        for (int i = 0; i < options.size(); i++)
+        for(unsigned int i = 0;i < options.size();i++)
         {
             item = options.at(i);
             StdOut::print(StringUtils::clr_blue);

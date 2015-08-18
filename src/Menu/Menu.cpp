@@ -22,8 +22,10 @@ Menu::Menu(string t)
 
 Menu::~Menu()
 {
-    for (int i = 0; i<options.size(); i++)
-        delete options.at(i);
+    for(vector<MenuOption*>::iterator option = options.begin();option != options.end();option++)
+    {
+        delete (*option);
+    }
 }
 
 
@@ -37,8 +39,10 @@ void Menu::show()
 {
     StdOut::printLine(title_bar);
 
-    for (int i = 0; i< options.size(); i++)
+    for(unsigned int i = 0;i < options.size();i++)
+    {
         StdOut::printLine(options.at(i)->showDescription(i));
+    }
 
     StdOut::printLine("Enter selection:");
 
@@ -81,7 +85,7 @@ MenuOption* Menu::getMenuItemFromString(const string& str)
 {
     if ( StringUtils::isUInt(str)) // parse int
     {
-        int i;
+        unsigned int i;
         i = stoi(str);
         if (i <= options.size() && i > 0)
             return options.at(stoi(str)-1);

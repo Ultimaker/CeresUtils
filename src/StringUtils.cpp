@@ -56,7 +56,7 @@ vector<string> & StringUtils::split(const string &str, const string &rgx, vector
     smatch string_match;
     if(regex_search(str,string_match,r)) //There is at least one match.
     {
-        for(int i = 1;i < string_match.size();i++) //Push all matches onto the vector. Note: Must start at 1.
+        for(unsigned int i = 1;i < string_match.size();i++) //Push all matches onto the vector. Note: Must start at 1.
         {
             elems.push_back(string_match[i]);
         }
