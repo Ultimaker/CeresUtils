@@ -22,13 +22,13 @@ MenuOption::~MenuOption()
 string MenuOption::showDescription(int pos) // show with description
 {
     return StringUtils::addWhiteSpaceUntillLengthIs(5, (to_string(pos+1) + ")") )
-        + color + StringUtils::addWhiteSpaceUntillLengthIs(20, name)  + StringUtils::clr_white + description;
+        + color + StringUtils::addWhiteSpaceUntillLengthIs(20, name)  + StringUtils::clr_original + description;
 }
 
 string MenuOption::showInfo(int pos) // show with info
 {
     return StringUtils::addWhiteSpaceUntillLengthIs(5, ( to_string(pos+1) + ")" ) )
-        + color + StringUtils::addWhiteSpaceUntillLengthIs(20, name)  + StringUtils::clr_white + info;
+        + color + StringUtils::addWhiteSpaceUntillLengthIs(20, name)  + StringUtils::clr_original + info;
 }
 string MenuOption::showInfo() // show with info
 {

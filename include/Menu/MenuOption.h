@@ -21,7 +21,7 @@ class MenuOption
         string name; //!< name of option in list
         string description; //!< short description
         string info; //!< mor eelaborate info (for help)
-        string color = StringUtils::clr_white; //!< color of the menu option name
+        string color = StringUtils::clr_original; //!< color of the menu option name
 
         virtual ~MenuOption();
         virtual void execute(vector<string>& args) = 0; //!< the function to be executed on selection of the option @param args the arguments supplied by the user

@@ -47,7 +47,7 @@ void MenuFactory::helpFunction(vector<string>& args)
             item = options.at(i);
             StdOut::print(StringUtils::clr_blue);
             StdOut::printLine( item->showInfo(i) );
-            StdOut::print(StringUtils::clr_white);
+            StdOut::print(StringUtils::clr_original);
         }
     }
     else

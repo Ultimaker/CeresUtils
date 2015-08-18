@@ -20,6 +20,7 @@ const string StringUtils::clr_blue     = "";
 const string StringUtils::clr_magenta  = "";
 const string StringUtils::clr_cyan     = "";
 const string StringUtils::clr_white    = "";
+const string StringUtils::clr_original = "";
 #else
 const string StringUtils::clr_black    = "\x1b[30m";
 const string StringUtils::clr_red      = "\x1b[31m";
@@ -29,6 +30,7 @@ const string StringUtils::clr_blue     = "\x1b[34m";
 const string StringUtils::clr_magenta  = "\x1b[35m";
 const string StringUtils::clr_cyan     = "\x1b[36m";
 const string StringUtils::clr_white    = "\x1b[37m";
+const string StringUtils::clr_original = "\x1b[0m";
 #endif
 
 

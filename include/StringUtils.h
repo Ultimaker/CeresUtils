@@ -34,6 +34,7 @@ class StringUtils
         static const string clr_magenta;
         static const string clr_cyan;
         static const string clr_white;
+        static const string clr_original;
 
         static string addWhiteSpaceUntillLengthIs(int length, string in);//!< add white space after string
     protected:
