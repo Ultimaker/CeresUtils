@@ -35,6 +35,12 @@ class StringUtils
         static const string clr_cyan;
         static const string clr_white;
         static const string clr_original;
+        static const string clr_reset;
+
+        static const string underline;
+        static const string no_underline;
+        static const string bold;
+        static const string normal;
 
         static string addWhiteSpaceUntillLengthIs(int length, string in);//!< add white space after string
     protected:

@@ -31,7 +31,12 @@ const string StringUtils::clr_magenta  = "\x1b[35m";
 const string StringUtils::clr_cyan     = "\x1b[36m";
 const string StringUtils::clr_white    = "\x1b[37m";
 const string StringUtils::clr_original = "\x1b[0m";
+const string StringUtils::clr_reset    = "\e[m";
 #endif
+const string StringUtils::bold         = "\x1b[1m";
+const string StringUtils::underline    = "\x1b[4m";
+const string StringUtils::no_underline = "\x1b[24m";
+const string StringUtils::normal       = "\x1b[0m";
 
 
 vector<string> & StringUtils::split(const string &s, char delim, vector<string> &elems) {
